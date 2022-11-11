@@ -83,3 +83,5 @@ for col in ws2.iter_cols(min_row=1, max_col=2, max_row=2):
 print(tuple(ws2.rows))
 print(tuple(ws2.columns))
 注意：ws2.rows和ws2.columns是generator对象，因此需要使用tuple进行“解析”下。
+
+
