@@ -13,3 +13,6 @@ for cell_row in sheet1["E1":"E4"]:
         #cell = "=SUM(1, 2)" 不可行，貌似公式的本质就是带“=”的字符串
         cell.value = "=SUM(1, 2)"
 wb.save("hello_world.xlsx")    
+
+
+# 公式的本质就是字符串，所以可以在字符串中插入变量，可以使用 f"=sum({x}:{y})" 这种形式
