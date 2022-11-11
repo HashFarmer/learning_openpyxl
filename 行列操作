@@ -32,3 +32,27 @@ for column in ws.iter_cols():
 
 # 删除列
 # ws.delete_rows()
+
+# 追加行数据
+ws.append()
+
+# 删除、插入行
+ws.insert_rows(5)
+ws.delete_rows(7)
+
+ws.insert_cols(3)
+ws.delete_cols(3)
+
+# 列“序号”->“字母” 
+get_column_letter(3)
+
+
+
+# range 区域操作
+
+ws.move_range()
+
+
+
+
+
