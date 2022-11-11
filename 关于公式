@@ -16,3 +16,8 @@ wb.save("hello_world.xlsx")
 
 
 # 公式的本质就是字符串，所以可以在字符串中插入变量，可以使用 f"=sum({x}:{y})" 这种形式
+
+# x = 5
+# y = 6
+# print(f"x is {x}, y is {y}")
+# print("x is {}, y is {}".format(x, y))
