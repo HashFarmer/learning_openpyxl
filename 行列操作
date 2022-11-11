@@ -25,7 +25,9 @@ for row in ws['A1:C3']:    # ws['A1':'C3'] 一样
 for row in ws.iter_rows():
     for cell in row:
         print(cell.value)
-# 所有咧
+# 所有列
 for column in ws.iter_cols():
     for cell in column:
         print(cell.value)
+
+# 删除列
