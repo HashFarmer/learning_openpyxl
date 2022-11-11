@@ -40,6 +40,15 @@ for each_cell in colA:
     print(each_cell.value)
 至于为什么获取cell_range和colA的for循序的次数不一样，这个问题就留给大家自己了。
 
+# cell_range 形式，需要两次循环
+for cell_row in sheet1["B1":"B4"]:
+    for cell in cell_row:
+        print(cell.value)
+
+# 单列形式 ，一次循环
+for cell in sheet1['B']:
+    print(cell.value)
+
 
 
 for循环的方式访问多个单元格可以这样：
