@@ -1,0 +1,3 @@
+from openpyxl.utils import FORMULAE
+print(FORMULAE)
+"NOT" in FORMULAE
