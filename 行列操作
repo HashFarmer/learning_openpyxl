@@ -31,3 +31,4 @@ for column in ws.iter_cols():
         print(cell.value)
 
 # 删除列
+# ws.delete_rows()
