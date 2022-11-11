@@ -3,6 +3,7 @@ print(FORMULAE)
 "NOT" in FORMULAE
 
 
-# sheet1["C1"] = "=SUM(1, 2)" # 是字符串还是公式？
+sheet1["C1"] = "=SUM(1, 2)" # 是字符串还是公式？
+sheet1["D1"].value = "=SUM(1, 2)" # 与上面代码效果相同
 # print(sheet1["C1"].value) # 是字符串，但是进过 wb.save("file_name.xlsx")后，手动打开xlsx文件，是数值
 
