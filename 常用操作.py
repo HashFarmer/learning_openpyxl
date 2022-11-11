@@ -28,7 +28,7 @@ sheet_b = wb.create_sheet('test',0) #在指定位置创建工作表
 sheet_names = wb.get_sheet_names()
 print(sheet_names)
 
-#选择指定的工作表
+#选择指定的工作表, get_sheet_by_name已废
 # 方法1
 ws = wb.get_sheet_by_name(sheet_names[0])
 # 方法2
@@ -37,6 +37,9 @@ ws2 = wb2['test']
 ws3 = wb2.get_sheet_by_name('test')
 # 方法4
 ws =wb2.active # 第一个工作表？
+
+
+
 
 
 # 操作工作表
