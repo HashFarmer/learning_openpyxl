@@ -7,3 +7,9 @@ sheet1["C1"] = "=SUM(1, 2)" # 是字符串还是公式？
 sheet1["D1"].value = "=SUM(1, 2)" # 与上面代码效果相同
 # print(sheet1["C1"].value) # 是字符串，但是进过 wb.save("file_name.xlsx")后，手动打开xlsx文件，是数值
 
+# # cell_range 形式，需要两次循环
+for cell_row in sheet1["E1":"E4"]:
+    for cell in cell_row:
+        #cell = "=SUM(1, 2)" 不可行，貌似公式的本质就是带“=”的字符串
+        cell.value = "=SUM(1, 2)"
+wb.save("hello_world.xlsx")    
