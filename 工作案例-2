@@ -1,0 +1,29 @@
+
+
+In [2]: import pandas as pd
+
+In [3]: data = pd.read_excel("./data_all.xlsx")
+
+In [4]: data.head()
+
+In [5]: data_to = data.groupby(['org_code','zone_code','credit_code','full_name','industry_code'])['sub_code'].apply(list)
+
+In [6]: writer = pd.ExcelWriter("data_ok.xlsx")
+
+In [7]: data_to.to_excel(writer,sheet_name = "all")
+
+In [8]: writer.save()
+
+
+
+In [9]: from openpyxl import load_workbook
+
+In [10]: wb = load_workbook("data_ok.xlsx")
+
+In [11]: sheet_all = wb["all"]
+
+In [16]: for cell in sheet_all["M"]:
+    ...:     cell.value = f"=MID(F{cell.row},2,LEN(F{cell.row})-2)"
+    ...: 
+
+In [17]: wb.save("data_ok_2.xlsx")
