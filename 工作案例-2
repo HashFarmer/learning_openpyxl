@@ -1,4 +1,4 @@
-
+## 多行 变 一行
 
 In [2]: import pandas as pd
 
@@ -15,6 +15,7 @@ In [7]: data_to.to_excel(writer,sheet_name = "all")
 In [8]: writer.save()
 
 
+## 批量填充公式
 
 In [9]: from openpyxl import load_workbook
 
