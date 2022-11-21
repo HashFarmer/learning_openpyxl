@@ -57,6 +57,7 @@ for cell in sheet1['B']:
 
 for循环的方式访问多个单元格可以这样：
 
+# 逐行扫描
 for row in ws2.iter_rows(min_row=1, max_col=2, max_row=2):
     for cell in row:
         print(cell)
@@ -66,6 +67,7 @@ for row in ws2.iter_rows(min_row=1, max_col=2, max_row=2):
 <Cell 'mytest'.A2>
 <Cell 'mytest'.B2>
 
+# 逐列扫描
 for col in ws2.iter_cols(min_row=1, max_col=2, max_row=2):
          for cell in col:
              print(cell)
