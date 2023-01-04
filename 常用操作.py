@@ -15,8 +15,6 @@ print(wb.encoding, end='\n\n')  # 获取文档的字符集编码
 print(wb.properties)  # 获取文档的元数据如标题，创建者，创建日期等
 
 
-
-
 ### 关于工作表
 
 #创建新的工作表
@@ -24,9 +22,17 @@ sheet_a = wb.create_sheet('123') #在所有工作表后面
 #
 sheet_b = wb.create_sheet('test',0) #在指定位置创建工作表
 
-#获取所有的工作表名称
-sheet_names = wb.get_sheet_names()
-print(sheet_names)
+
+
+#获取所有的工作表名称，下面方法已废弃
+# sheet_names = wb.get_sheet_names()
+# print(sheet_names)
+#新方法
+wb.sheetnames
+
+
+
+
 
 #选择指定的工作表, get_sheet_by_name已废
 # 方法1
